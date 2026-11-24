@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital Academia CUN</title>
+
+    <link rel="shortcut icon" href="img/html.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header id="inicio"> 
+        <h1>Biblioteca Digital de Tecnologia</h1>
+        <nav>
+            <ul>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#solicitud">Solicitud</a></li>
+                <li><a href="#faq">faq</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recursos">
+            <h2>Catalogo de Recursos destacados</h2>
+            
+            <article>
+                <header>
+                    <h3>Documentacion web y CSS</h3>
+                </header>
+                <p>Consulta la guia mediante este visor incrustado</p>
+
+                <iframe class="multimedia" src="https://cun.edu.co/" width="100%" height="350px" loading="lazy"></iframe>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Infografia - Estructura del arbol DOM</h3>
+                </header>
+
+                <figure>
+                    <img class="multimedia" src="img/html.webp" alt="" width="220px" height="auto" loading="lazy">
+                </figure>
+            </article>
+
+        </section>
+
+        <section id="multimedia">
+            <header>
+                <h2>Audiolibro - Historia de la web</h2>
+            </header>
+
+            <audio class="multimedia" src="/audio/teclado.mp3" controls type="audio/mpeg"></audio>
+
+            <header>
+                <h3>Videos Tutoriales</h3>
+            </header>
+
+                <video class="multimedia" src="https://www.pexels.com/es-es/download/video/2278095/" width="220px" height="auto" controls></video>
+        </section>
+
+        <section id="solicitud">
+            <h2>Solicitud de Prestamos</h2>
+
+            <form action="/procesar-solicitud">
+
+                <fieldset>
+                    <legend>Formulario de solicitud</legend>
+
+                    <div>
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" required name="nombre" id="nombre" placeholder="Ingrese su nombre completo">
+                    </div>
+
+                    <div>
+                        <label for="correo">Correo Electronico:</label>
+                        <input type="email" required name="correo" id="correo" placeholder="Ingrese su correo electronico">
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Recurso Requerido:</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese el recurso que desea solicitar"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+        </section>
+        
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+
+            <details open>
+                <summary>¿Como puedo solicitar un recurso?</summary>
+                <p>Para solicitar un recurso, debes llenar el formulario de solicitud con tu nombre, correo electrónico y el recurso que deseas solicitar. Luego, haz clic en "Enviar Solicitud".</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Digital Academia CUN. Todos los derechos reservados.</p>
+        <p><a href="#inicio">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>
