@@ -1,17 +1,27 @@
+<!-- Define que el documento utiliza el estándar HTML5 -->
 <!DOCTYPE html>
+<!-- Elemento raíz del documento; lang="es" indica a navegadores y lectores de pantalla que el idioma es español -->
 <html lang="es">
+
 <head>
+    <!-- Define la codificación de caracteres UTF-8 (permite usar tildes y la letra ñ sin errores) -->
     <meta charset="UTF-8">
+    <!-- Configura la vista para dispositivos móviles (Diseño Responsivo) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Biblioteca Digital Academia CUN</title>
 
+    <!-- Ícono pequeño (Favicon) que acompaña el título en la pestaña del navegador -->
     <link rel="shortcut icon" href="img/html.webp" type="image/x-icon">
+    <!-- Vincula la hoja de estilos externa CSS para dar diseño a la página -->
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
+    <!-- ENCABEZADO PRINCIPAL: Contiene el título y la barra de navegación -->
     <header id="inicio"> 
         <h1>Biblioteca Digital de Tecnologia</h1>
+        <!-- Menú de navegación con enlaces internos (anclas) hacia cada sección mediante su atributo 'id' -->
         <nav>
             <ul>
                 <li><a href="#recursos">Recursos</a></li>
@@ -22,85 +32,109 @@
         </nav>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL: Agrupa las secciones centrales únicas de la página -->
     <main>
+        <!-- SECCIÓN 1: Catálogo de recursos -->
         <section id="recursos">
             <h2>Catalogo de Recursos destacados</h2>
             
+            <!-- Artículo independiente 1: Visor externo -->
             <article>
                 <header>
                     <h3>Documentacion web y CSS</h3>
                 </header>
                 <p>Consulta la guia mediante este visor incrustado</p>
 
+                <!-- iframe incrusta otra página web dentro de esta. loading="lazy" optimiza la carga -->
                 <iframe class="multimedia" src="https://cun.edu.co/" width="100%" height="350px" loading="lazy"></iframe>
             </article>
 
+            <!-- Artículo independiente 2: Imagen con figura semántica -->
             <article>
                 <header>
                     <h3>Infografia - Estructura del arbol DOM</h3>
                 </header>
 
+                <!-- figure agrupa contenido visual autónomo; alt describe la imagen para accesibilidad -->
                 <figure>
                     <img class="multimedia" src="img/html.webp" alt="" width="220px" height="auto" loading="lazy">
                 </figure>
             </article>
-
         </section>
 
+        <!-- SECCIÓN 2: Contenido Multimedia (Audio y Video) -->
         <section id="multimedia">
             <header>
                 <h2>Audiolibro - Historia de la web</h2>
             </header>
 
+            <!-- Reproductor de audio nativo; 'controls' muestra los botones de play, pausa y volumen -->
             <audio class="multimedia" src="/audio/teclado.mp3" controls type="audio/mpeg"></audio>
 
             <header>
                 <h3>Videos Tutoriales</h3>
             </header>
 
-                <video class="multimedia" src="https://www.pexels.com/es-es/download/video/2278095/" width="220px" height="auto" controls></video>
+            <!-- Reproductor de video nativo -->
+            <video class="multimedia" src="https://www.pexels.com/es-es/download/video/2278095/" width="220px" height="auto" controls></video>
         </section>
 
+        <!-- SECCIÓN 3: Formulario de contacto / solicitud -->
         <section id="solicitud">
             <h2>Solicitud de Prestamos</h2>
 
+            <!-- form captura datos del usuario. 'action' indica la ruta del servidor que procesaría los datos -->
             <form action="/procesar-solicitud">
 
+                <!-- fieldset agrupa campos relacionados visual y semánticamente -->
                 <fieldset>
+                    <!-- legend asigna un título al grupo de campos -->
                     <legend>Formulario de solicitud</legend>
 
                     <div>
+                        <!-- 'for' vincula la etiqueta con el 'id' del input (mejora accesibilidad y usabilidad) -->
                         <label for="nombre">Nombre Completo:</label>
+                        <!-- 'required' obliga a llenar el campo antes de enviar -->
                         <input type="text" required name="nombre" id="nombre" placeholder="Ingrese su nombre completo">
                     </div>
 
                     <div>
                         <label for="correo">Correo Electronico:</label>
+                        <!-- type="email" valida automáticamente que el texto tenga formato de correo (@) -->
                         <input type="email" required name="correo" id="correo" placeholder="Ingrese su correo electronico">
                     </div>
 
                     <div>
                         <label for="mensaje">Recurso Requerido:</label>
+                        <!-- textarea permite ingresar textos largos de varias líneas -->
                         <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese el recurso que desea solicitar"></textarea>
                     </div>
                 </fieldset>
+                <!-- Botón que dispara el evento 'submit' del formulario -->
                 <button type="submit">Enviar Solicitud</button>
             </form>
         </section>
         
+        <!-- SECCIÓN 4: Preguntas Frecuentes -->
         <section id="faq">
             <h2>Preguntas Frecuentes</h2>
 
+            <!-- details crea un acordeón interactivo sin necesidad de JavaScript; 'open' lo muestra desplegado por defecto -->
             <details open>
+                <!-- summary es el título visible en el que el usuario hace clic -->
                 <summary>¿Como puedo solicitar un recurso?</summary>
                 <p>Para solicitar un recurso, debes llenar el formulario de solicitud con tu nombre, correo electrónico y el recurso que deseas solicitar. Luego, haz clic en "Enviar Solicitud".</p>
             </details>
         </section>
     </main>
 
+    <!-- PIE DE PÁGINA: Información de derechos de autor y enlace para volver arriba -->
     <footer>
         <p>&copy; 2026 Biblioteca Digital Academia CUN. Todos los derechos reservados.</p>
         <p><a href="#inicio">Volver al inicio</a></p>
     </footer>
+
+    <!-- Vincula el archivo JavaScript al final del body para asegurar que todo el HTML ya exista en el DOM -->
+    <script src="js/script.js"></script>
 </body>
 </html>

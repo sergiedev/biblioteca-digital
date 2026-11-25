@@ -1,55 +1,63 @@
+/* Estilos generales aplicados a toda la página */
 body {
-   font-family: Georgia, 'Times New Roman', Times, serif; 
-   background-color: #f8f7f7;
-   color: #333;
-   margin: 0;
+   font-family: Georgia, 'Times New Roman', Times, serif; /* Tipografía con respaldo */
+   background-color: #f8f7f7; /* Fondo gris muy claro */
+   color: #333; /* Color de texto gris oscuro (mejor lectura que negro puro) */
+   margin: 0; /* Elimina el margen exterior por defecto del navegador */
 }
 
+/* Selector múltiple: aplica el mismo diseño al header principal (hijo directo de body) y al footer */
 body > header, footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+    background-color: #636a6b; /* Fondo azul aguamarina */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centra el contenido */
+    padding: 1rem; /* Espaciado interno */
 }
 
+/* Estilos específicos adicionales para el pie de página */
 footer {
     margin-top: 30px;
-    border-top: 1px solid #f5fd78;
+    border-top: 1px solid #f5fd78; /* Línea superior amarilla */
     font-size: 14px;
 }
 
+/* Configuración del menú de navegación usando Flexbox */
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Quita las viñetas (puntos) de la lista */
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Alinea los elementos horizontalmente en fila */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    gap: 20px; /* Espacio uniforme entre cada enlace */
 }
 
+/* Color de los enlaces en navegación y pie de página */
 nav a, footer a {
-    color: #f5fd78
+    color: #f5fd78; /* Amarillo claro */
 }
 
+/* Pseudo-clase :hover -> Cambia el estilo cuando el usuario pasa el cursor por encima */
 nav a:hover, footer a:hover {
     text-decoration: underline;
-    color: #fff
+    color: #fff;
 }
 
+/* Contenedor principal centrado */
 main {
-    width: 85%;
-    max-width: 800px;
-    margin: 20px auto;
+    width: 85%; /* Ocupa el 85% del ancho en pantallas pequeñas */
+    max-width: 800px; /* Limita el ancho máximo en pantallas grandes para facilitar la lectura */
+    margin: 20px auto; /* 'auto' a los lados centra el bloque horizontalmente */
 }
 
+/* Estilo tipo "tarjeta" para cada sección */
 section {
-
     background-color: #fff;
     padding: 20px;  
     margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Borde sutil gris */
 }
 
+/* Subtítulos de sección con línea decorativa inferior */
 section h2 {
     color: #333;
     margin-top: 0;
@@ -57,12 +65,14 @@ section h2 {
     padding-bottom: 5px;
 }
 
+/* Títulos dentro de los artículos */
 article header h3 {
     margin-top: 0;
     color: #333;
     font-size: 1.2em;
 }
 
+/* Sub-tarjetas para cada artículo individual */
 article {
     background-color: #f9f9f9;
     padding: 15px;
@@ -71,13 +81,15 @@ article {
     border: 1px solid #ddd;
 }
 
+/* Clase reutilizable para elementos multimedia (img, video, audio, iframe) */
 .multimedia {
-    max-width: 100%;
-    display: block;
+    max-width: 100%; /* Evita que el elemento se desborde de su contenedor en móviles */
+    display: block; /* Convierte elementos en línea en bloques para controlar márgenes */
     margin: 10px 0;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
 }
 
+/* Diseño del botón de envío del formulario */
 button {
     background-color: #333;
     color: rgb(235, 235, 5);
@@ -85,5 +97,5 @@ button {
     padding: 10px 20px;
     font-weight: bold;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
 }
